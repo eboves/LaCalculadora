@@ -16,7 +16,8 @@
         android:layout_height="40dp"
         android:id="@+id/textResult1"
         android:text="0"
-
+        android:textSize="30dp"
+        android:inputType="numberDecimal"
         android:background="#D5D5D5"
         />
 
@@ -27,11 +28,11 @@
         android:layout_below="@+id/textResult1"
         android:layout_centerHorizontal="true"
         android:background="#ff8888"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="13dp">
 
         <LinearLayout
             android:id="@+id/layout2"
-            android:layout_width="65dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -39,8 +40,7 @@
                 android:id="@+id/butEquals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="="
-                />
+                android:text="="/>
 
 
             <Button
@@ -56,18 +56,18 @@
                 android:layout_height="wrap_content"
                 android:text="4"/>
 
+
             <Button
-                android:id="@+id/bu1"
+                android:id="@+id/but7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="/"/>
+                android:text="7"/>
 
-
-        </LinearLayout>
+            </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout3"
-            android:layout_width="65dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -91,17 +91,21 @@
                 android:layout_height="wrap_content"
                 android:text="5"/>
 
+
             <Button
-                android:id="@+id/bu2"
+                android:id="@+id/but8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="/"/>
+                android:text="8"/>
+
+
+
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout4"
-            android:layout_width="65dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -124,87 +128,56 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6"/>
-            <Button
-                android:id="@+id/bu3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/"/>
-
-        </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/layout5"
-                android:layout_width="65dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/bu4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="7"/>
-
-
-                <Button
-                    android:id="@+id/bu5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="*"/>
-
-
-                <Button
-                    android:id="@+id/bu6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="/"/>
-                <Button
-                    android:id="@+id/bu7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="/"/>
-
-            </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout6"
-            android:layout_width="65dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/bu8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7"/>
 
 
             <Button
-                android:id="@+id/bu9"
+                android:id="@+id/but9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="*"/>
+                android:text="9"/>
 
 
             <Button
-                android:id="@+id/bu0"
+                android:id="@+id/butSum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="/"/>
+                android:text="+"/>
+
 
             <Button
-                android:id="@+id/bu11"
+                android:id="@+id/butSub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="/"/>
+                android:text="-"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layout7"
-            android:layout_width="65dp"
+            android:id="@+id/layout2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/butEquals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="="/>
+
+
+            <Button
+                android:id="@+id/but1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"/>
+
+
+            <Button
+                android:id="@+id/but4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"/>
+
 
             <Button
                 android:id="@+id/but7"
@@ -212,126 +185,75 @@
                 android:layout_height="wrap_content"
                 android:text="7"/>
 
-
-            <Button
-                android:id="@+id/butMult"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="*"/>
-
-            <Button
-                android:id="@+id/bu12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/"/>
-
-            <Button
-                android:id="@+id/butDiv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/"/>
-
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/layout8"
-            android:layout_width="65dp"
+            android:id="@+id/layout2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/bu13"
+                android:id="@+id/butEquals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="="/>
+
+
+            <Button
+                android:id="@+id/but1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"/>
+
+
+            <Button
+                android:id="@+id/but0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"/>
 
 
             <Button
-                android:id="@+id/bu14"
+                android:id="@+id/butDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"/>
-
-            <Button
-                android:id="@+id/bu15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"/>
-
-            <Button
-                android:id="@+id/bu16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"/>
+                android:text="DEL"/>
 
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/layout9"
-            android:layout_width="65dp"
+            android:id="@+id/layout2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/bu17"
+                android:id="@+id/butEquals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"/>
+                android:text="="/>
 
 
             <Button
-                android:id="@+id/bu18"
+                android:id="@+id/but1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"/>
+                android:text="1"/>
+
 
             <Button
-                android:id="@+id/bu19"
+                android:id="@+id/but4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"/>
+                android:text="4"/>
+
 
             <Button
-                android:id="@+id/bu20"
+                android:id="@+id/but7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"/>
+                android:text="7"/>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout10"
-            android:layout_width="65dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/bu21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"/>
-
-
-            <Button
-                android:id="@+id/bu22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"/>
-
-            <Button
-                android:id="@+id/bu23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"/>
-
-            <Button
-                android:id="@+id/bu24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"/>
-
-        </LinearLayout>
-
 
     </LinearLayout>
 

@@ -38,6 +38,7 @@
 
             <Button
                 android:id="@+id/butEquals"
+                android:background="@null"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="="/>
@@ -47,6 +48,7 @@
                 android:id="@+id/but1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="1"/>
 
 
@@ -54,6 +56,7 @@
                 android:id="@+id/but4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="4"/>
 
 
@@ -61,6 +64,7 @@
                 android:id="@+id/but7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="7"/>
 
 
@@ -68,6 +72,7 @@
                 android:id="@+id/butMult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="*"/>
 
 
@@ -75,6 +80,7 @@
                 android:id="@+id/butDiv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="/"/>
 
             </LinearLayout>
@@ -96,6 +102,7 @@
                 android:id="@+id/but2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="2"/>
 
 
@@ -103,6 +110,7 @@
                 android:id="@+id/but5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="5"/>
 
 
@@ -110,6 +118,7 @@
                 android:id="@+id/but8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="8"/>
 
 
@@ -117,6 +126,7 @@
                 android:id="@+id/but0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="0"/>
 
 
@@ -138,12 +148,14 @@
                 android:id="@+id/butDot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="."/>
 
 
             <Button
                 android:id="@+id/but3"
                 android:layout_width="wrap_content"
+                android:background="@null"
                 android:layout_height="wrap_content"
                 android:text="3"/>
 
@@ -152,12 +164,14 @@
                 android:id="@+id/but6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="6"/>
 
 
             <Button
                 android:id="@+id/but9"
                 android:layout_width="wrap_content"
+                android:background="@null"
                 android:layout_height="wrap_content"
                 android:text="9"/>
 
@@ -166,6 +180,7 @@
                 android:id="@+id/butSum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="+"/>
 
 
@@ -173,6 +188,7 @@
                 android:id="@+id/butSub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:text="-"/>
 
         </LinearLayout>
