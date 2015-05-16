@@ -180,7 +180,7 @@ public class MainActivity extends ActionBarActivity {
         String inputString = input.getText().toString();
         BigDecimal resultBigDecimal = null;
         resultBigDecimal = new Expression(inputString).eval();
-        String resultString = resultBigDecimal.toString();
+        String resultString = resultBigDecimal.toPlainString();
         input.setText(resultString);
             }
         }
