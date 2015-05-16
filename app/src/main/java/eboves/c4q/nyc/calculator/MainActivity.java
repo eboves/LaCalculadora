@@ -4,14 +4,17 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity {
 
+    public TextView input;
     private Button butSum;
     private Button butSub;
     private Button butMult;
@@ -57,11 +60,12 @@ public class MainActivity extends ActionBarActivity {
     private String operators;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        input = (TextView) findViewById(R.id.textResult1);
 
         but0 = (Button) findViewById(R.id.but0);
         but1 = (Button) findViewById(R.id.but1);
@@ -141,12 +145,25 @@ public class MainActivity extends ActionBarActivity {
         buttons.add(butRightParent);
 
         for (Button button : buttons) {
+<<<<<<< HEAD
             if (button != null) {
                 button.setOnClickListener(listener);
             }
 
         }
+=======
+            button.setOnClickListener(listener);
+>>>>>>> e3b434873a1292d41fe3bce1bf8d229923b6347e
 
+
+        }
+        butDelete.setEnabled(false);
+        butDot.setEnabled(false);
+        butSub.setEnabled(false);
+        butDiv.setEnabled(false);
+        butMult.setEnabled(false);
+        butSum.setEnabled(false);
+        butClr.setEnabled(false);
     }
 
 
@@ -172,5 +189,14 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void inputToSting(View v) throws Exception{
+        String inputString = input.getText().toString();
+        BigDecimal resultBigDecimal = null;
+        resultBigDecimal = new Expression(inputString).eval();
+        String resultString = resultBigDecimal.toString();
+        input.setText(resultString);
+            }
+        }
 
-}
+
+
