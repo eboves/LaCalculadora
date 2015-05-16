@@ -30,6 +30,7 @@ public class MainActivity extends ActionBarActivity {
     private Button but7;
     private Button but8;
     private Button but9;
+    private Button butDelete;
     private String string;
 
     private TextView result;
@@ -46,6 +47,21 @@ public class MainActivity extends ActionBarActivity {
         but0 = (Button) findViewById(R.id.but0);
         but1 = (Button) findViewById(R.id.but1);
         but2 = (Button) findViewById(R.id.but2);
+        but3 = (Button) findViewById(R.id.but3);
+        but4 = (Button) findViewById(R.id.but4);
+        but5 = (Button) findViewById(R.id.but5);
+        but6 = (Button) findViewById(R.id.but6);
+        but7 = (Button) findViewById(R.id.but7);
+        but8 = (Button) findViewById(R.id.but8);
+        but9 = (Button) findViewById(R.id.but9);
+        butDelete = (Button) findViewById(R.id.butDelete);
+        butDot = (Button) findViewById(R.id.butDot);
+        butSub = (Button) findViewById(R.id.butSub);
+        butDiv = (Button) findViewById(R.id.butDiv);
+        butMult = (Button) findViewById(R.id.butMult);
+        butSum = (Button) findViewById(R.id.butSum);
+        butClr = (Button) findViewById(R.id.butClr);
+
 
 
         result = (TextView) findViewById(R.id.textResult1);
@@ -56,14 +72,27 @@ public class MainActivity extends ActionBarActivity {
         buttons.add(but0);
         buttons.add(but1);
         buttons.add(but2);
+        buttons.add(but3);
+        buttons.add(but4);
+        buttons.add(but5);
+        buttons.add(but6);
+        buttons.add(but6);
+        buttons.add(but7);
+        buttons.add(but8);
+        buttons.add(but9);
+        buttons.add(butDelete);
+        buttons.add(butDot);
+        buttons.add(butDiv);
+        buttons.add(butSum);
+        buttons.add(butSub);
+        buttons.add(butMult);
+        buttons.add(butClr);
 
         for (Button button : buttons) {
             button.setOnClickListener(listener);
         }
 
-
     }
-
 
 
     @Override

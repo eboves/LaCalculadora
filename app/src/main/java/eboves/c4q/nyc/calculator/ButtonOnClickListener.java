@@ -17,8 +17,6 @@ public class ButtonOnClickListener implements View.OnClickListener {
         this.textView = textView;
         input = "";
     }
-    
-
 
     public void onClick(View view){
 
@@ -38,6 +36,56 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 case R.id.but2:
                     input += "2";
                     break;
+                case R.id.but3:
+                    input += "3";
+                    break;
+                case R.id.but4:
+                    input += "4";
+                    break;
+                case R.id.but5:
+                    input += "5";
+                    break;
+                case R.id.but6:
+                    input += "6";
+                    break;
+                case R.id.but7:
+                    input += "7";
+                    break;
+                case R.id.but8:
+                    input += "8";
+                    break;
+                case R.id.but9:
+                    input += "9";
+                    break;
+                case R.id.butDot:
+                    input += ".";
+                    break;
+                case R.id.butDelete:
+                    if (input.length() != 0) {
+                        input = input.substring(0, input.length() - 1);
+                    }
+                    break;
+                case R.id.butSum:
+                    input += "+";
+                    break;
+                case R.id.butSub:
+                    input += "-";
+                    break;
+                case R.id.butMult:
+                    input += "*";
+                    break;
+                case R.id.butDiv:
+                    input += "/";
+                    break;
+                case R.id.butClr:
+                    if (input.length() != 0) {
+                        input = "";
+                    }
+                    break;
+
+
+
+
 
             }
 

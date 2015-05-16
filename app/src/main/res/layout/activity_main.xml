@@ -16,6 +16,7 @@
         android:layout_height="60dp"
         android:id="@+id/textResult1"
         android:text="0"
+        android:textSize="50dp"
         android:inputType="numberDecimal"
         android:background="#D5D5D5"
         />
