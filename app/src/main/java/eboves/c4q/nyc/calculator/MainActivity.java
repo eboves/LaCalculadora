@@ -145,25 +145,12 @@ public class MainActivity extends ActionBarActivity {
         buttons.add(butRightParent);
 
         for (Button button : buttons) {
-<<<<<<< HEAD
+
             if (button != null) {
                 button.setOnClickListener(listener);
             }
 
         }
-=======
-            button.setOnClickListener(listener);
->>>>>>> e3b434873a1292d41fe3bce1bf8d229923b6347e
-
-
-        }
-        butDelete.setEnabled(false);
-        butDot.setEnabled(false);
-        butSub.setEnabled(false);
-        butDiv.setEnabled(false);
-        butMult.setEnabled(false);
-        butSum.setEnabled(false);
-        butClr.setEnabled(false);
     }
 
 

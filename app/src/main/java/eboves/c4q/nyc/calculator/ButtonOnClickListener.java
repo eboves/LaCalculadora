@@ -82,6 +82,44 @@ public class ButtonOnClickListener implements View.OnClickListener {
                         input = "";
                     }
                     break;
+                case R.id.butSin:
+                    input += "Sin(";
+                    //TODO
+                    break;
+                case R.id.butCos:
+                    input += "Cos(";
+                    //TODO
+                    break;
+                case R.id.butTan:
+                    input += "Tan(";
+                    //TODO
+                    break;
+                case R.id.butLog:
+                    input += "Log(";
+                    //TODO
+                    break;
+                case R.id.butLn:
+                    input += "Ln(";
+                    //TODO
+                    break;
+                case R.id.butLeftParent:
+                    input += "(";
+                    break;
+                case R.id.butRightParent:
+                    input += ")";
+                    break;
+                case R.id.butExponent:
+                    input += "e^(";
+                    //TODO
+                    break;
+                case R.id.butPI:
+                    input += "π";
+                    //TODO
+                    break;
+                case R.id.butPercent:
+                    input += "%";
+                    //TODO
+                    break;
 
             }
 

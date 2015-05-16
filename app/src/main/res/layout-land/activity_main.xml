@@ -185,7 +185,8 @@
                 android:id="@+id/butEquals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="="/>
+                android:text="="
+                android:onClick="inputToSting"/>
 
 
             <Button
