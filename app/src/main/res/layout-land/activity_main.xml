@@ -32,7 +32,152 @@
 
         <LinearLayout
             android:id="@+id/layout2"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/butSin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sin"/>
+
+
+            <Button
+                android:id="@+id/butFactorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x!"/>
+
+
+            <Button
+                android:id="@+id/butExponent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exp"/>
+
+
+            <Button
+                android:id="@+id/butLeftParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="("/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/butCos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cos"/>
+
+
+            <Button
+                android:id="@+id/butLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="log"/>
+
+
+            <Button
+                android:id="@+id/butXPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X^y"/>
+
+
+            <Button
+                android:id="@+id/butRightParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=")"/>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout4"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/butTan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tan"/>
+
+
+            <Button
+                android:id="@+id/butLn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ln"/>
+
+
+            <Button
+                android:id="@+id/butE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="e"/>
+
+
+            <Button
+                android:id="@+id/butPI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pi"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout5"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/butRadical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="v"/>
+
+
+            <Button
+                android:id="@+id/butInvertido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inv"/>
+
+
+            <Button
+                android:id="@+id/butRadian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rad"/>
+
+
+            <Button
+                android:id="@+id/butDegree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deg"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout6"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -41,6 +186,41 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="="/>
+
+
+            <Button
+                android:id="@+id/butNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+
+            <Button
+                android:id="@+id/butClr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clr"/>
+
+
+            <Button
+                android:id="@+id/butPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout7"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/butAns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ans"/>
 
 
             <Button
@@ -63,19 +243,19 @@
                 android:layout_height="wrap_content"
                 android:text="7"/>
 
-            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layout3"
-            android:layout_width="wrap_content"
+            android:id="@+id/layout8"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/butClr"
+                android:id="@+id/but0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Clr"/>
+                android:text="0"/>
 
 
             <Button
@@ -98,22 +278,19 @@
                 android:layout_height="wrap_content"
                 android:text="8"/>
 
-
-
-
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layout4"
-            android:layout_width="wrap_content"
+            android:id="@+id/layout9"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/butDot"
+                android:id="@+id/butDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="."/>
+                android:text="Del"/>
 
 
             <Button
@@ -136,6 +313,27 @@
                 android:layout_height="wrap_content"
                 android:text="9"/>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout0"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/butMult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"/>
+
+
+            <Button
+                android:id="@+id/butDiv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"/>
+
 
             <Button
                 android:id="@+id/butSum"
@@ -152,108 +350,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/layout2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/butEquals"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="="/>
-
-
-            <Button
-                android:id="@+id/but1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"/>
-
-
-            <Button
-                android:id="@+id/but4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4"/>
-
-
-            <Button
-                android:id="@+id/but7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/layout2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/butEquals"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="="/>
-
-
-            <Button
-                android:id="@+id/but1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"/>
-
-
-            <Button
-                android:id="@+id/but0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"/>
-
-
-            <Button
-                android:id="@+id/butDelete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DEL"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/layout2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/butEquals"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="="/>
-
-
-            <Button
-                android:id="@+id/but1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"/>
-
-
-            <Button
-                android:id="@+id/but4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4"/>
-
-
-            <Button
-                android:id="@+id/but7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7"/>
-
-        </LinearLayout>
 
     </LinearLayout>
 

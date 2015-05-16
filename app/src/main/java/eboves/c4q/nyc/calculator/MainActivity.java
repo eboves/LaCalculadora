@@ -16,7 +16,6 @@ public class MainActivity extends ActionBarActivity {
     private Button butSub;
     private Button butMult;
     private Button butDiv;
-    private Button butPercent;
     private Button butEquals;
     private Button butClr;
     private Button butDot;
@@ -31,8 +30,28 @@ public class MainActivity extends ActionBarActivity {
     private Button but8;
     private Button but9;
     private Button butDelete;
-    private String string;
 
+    //Scientific Calculator part
+
+    private Button butPercent;
+    private Button butSin;
+    private Button butCos;
+    private Button butTan;
+    private Button butLog;
+    private Button butLn;
+    private Button butFactorial;
+    private Button butExponent;
+    private Button butLeftParent;
+    private Button butRightParent;
+    private Button butXPower;
+    private Button butPI;
+    private Button butE;
+    private Button butRadian;
+    private Button butDegree;
+    private Button butInvertido;
+    private Button butRadical;
+
+    private String string;
     private TextView result;
     private float saveText;
     private String operators;
@@ -60,9 +79,25 @@ public class MainActivity extends ActionBarActivity {
         butDiv = (Button) findViewById(R.id.butDiv);
         butMult = (Button) findViewById(R.id.butMult);
         butSum = (Button) findViewById(R.id.butSum);
+        butSin = (Button) findViewById(R.id.butSin);
+        butCos = (Button) findViewById(R.id.butCos);
+        butTan = (Button) findViewById(R.id.butTan);
+        butLog = (Button) findViewById(R.id.butLog);
+        butLn = (Button) findViewById(R.id.butLn);
+        butPercent = (Button) findViewById(R.id.butPercent);
+        butLeftParent = (Button) findViewById(R.id.butLeftParent);
+        butRightParent = (Button) findViewById(R.id.butRightParent);
+        butFactorial = (Button) findViewById(R.id.butFactorial);
+        butXPower = (Button) findViewById(R.id.butXPower);
+        butExponent = (Button) findViewById(R.id.butExponent);
+        butE = (Button) findViewById(R.id.butE);
         butClr = (Button) findViewById(R.id.butClr);
-
-
+        butPI = (Button) findViewById(R.id.butPI);
+        butRadian = (Button) findViewById(R.id.butRadian);
+        butDegree = (Button) findViewById(R.id.butDegree);
+        butClr = (Button) findViewById(R.id.butClr);
+        butInvertido = (Button) findViewById(R.id.butInvertido);
+        butRadical = (Button) findViewById(R.id.butRadical);
 
         result = (TextView) findViewById(R.id.textResult1);
 
@@ -87,9 +122,29 @@ public class MainActivity extends ActionBarActivity {
         buttons.add(butSub);
         buttons.add(butMult);
         buttons.add(butClr);
+        buttons.add(butSin);
+        buttons.add(butCos);
+        buttons.add(butTan);
+        buttons.add(butLog);
+        buttons.add(butLn);
+        buttons.add(butInvertido);
+        buttons.add(butXPower);
+        buttons.add(butE);
+        buttons.add(butPI);
+        buttons.add(butRadian);
+        buttons.add(butDegree);
+        buttons.add(butExponent);
+        buttons.add(butRadical);
+        buttons.add(butFactorial);
+        buttons.add(butPercent);
+        buttons.add(butLeftParent);
+        buttons.add(butRightParent);
 
         for (Button button : buttons) {
-            button.setOnClickListener(listener);
+            if (button != null) {
+                button.setOnClickListener(listener);
+            }
+
         }
 
     }

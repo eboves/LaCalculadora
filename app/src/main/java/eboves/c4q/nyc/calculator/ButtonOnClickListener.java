@@ -83,10 +83,6 @@ public class ButtonOnClickListener implements View.OnClickListener {
                     }
                     break;
 
-
-
-
-
             }
 
             textView.setText(input);
