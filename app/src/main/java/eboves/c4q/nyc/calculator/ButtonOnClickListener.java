@@ -66,7 +66,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 if (last.equals(".")){ //prevents dot from being clicked twice in a row
                     input += "";
                 }
-                if (last.equals("+")){
+                else if (last.equals("+")){
                     input+="0.";
                 }
                 else if (last.equals("-")){
