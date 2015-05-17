@@ -61,12 +61,28 @@ public class ButtonOnClickListener implements View.OnClickListener {
             case R.id.but9:
                 input += "9";
                 break;
-            case R.id.butDot:
+
+            case R.id.butDot://crashes without zero loo at iphone cal
                 if (last.equals(".")){ //prevents dot from being clicked twice in a row
                     input += " ";
                 }
-                else {
+                if (last.equals("+")){
+                    input+="0.";
+                }
+                else if (last.equals("-")){
+                    input+="0.";
+                }
+                else if (last.equals("/")){
+                    input+="0.";
+                }
+                else if (last.equals("*")) {
                     input += "0.";
+                }
+                else if (string.equals(" ")) {
+                    input += "0.";
+                }
+                else {
+                    input += ".";
                 }
         break;
             case R.id.butSum:
@@ -80,6 +96,9 @@ public class ButtonOnClickListener implements View.OnClickListener {
                     input+="";
                 }
                 else if (last.equals("*")) {
+                    input += "";
+                }
+                else if (string.equals(" ")) {
                     input += "";
                 }
                 else {
@@ -98,9 +117,11 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 }
                 else if (last.equals("*")) {
                     input += "";
-                } else {
+                }
+                else {
                     input += "-";
                 }break;
+
             case R.id.butMult:
                 if (last.equals("+")){
                     input+="";
@@ -113,9 +134,14 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 }
                 else if (last.equals("*")) {
                     input += "";
-                } else {
+                }
+                else if (string.equals(" ")) {
+                        input += "";
+                }
+                else {
                     input += "*";
                 }break;
+
             case R.id.butDiv:
                 if (last.equals("+")){
                     input+="";
@@ -128,9 +154,14 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 }
                 else if (last.equals("*")) {
                     input += "";
-                } else {
+                }
+                else if (string.equals(" ")) {
+                        input += "";
+                }
+                else {
                     input += "/";
                 }break;
+
             case R.id.butDelete:
                if (input.length() > 1 ) { // 1 not zerp or crush
                     input = input.substring(0, input.length() - 1);
