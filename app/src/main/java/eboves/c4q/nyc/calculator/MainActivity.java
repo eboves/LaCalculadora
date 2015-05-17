@@ -145,14 +145,11 @@ public class MainActivity extends ActionBarActivity {
         buttons.add(butRightParent);
 
         for (Button button : buttons) {
-
-            if (button != null) {
+            if (button != null) { //prevents app from crashing when put to landscape
                 button.setOnClickListener(listener);
             }
-
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -176,7 +173,7 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void inputToSting(View v) throws Exception{
+    public void solve (View v) {
         String inputString = input.getText().toString();
         BigDecimal resultBigDecimal = null;
         resultBigDecimal = new Expression(inputString).eval();
