@@ -4,6 +4,7 @@
 package eboves.c4q.nyc.calculator;
 
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
     public void onClick(View view){
         String string = textView.getText().toString();
         String last = string.substring(string.length() - 1);
+        Log.d("last",last);
 
         int click = view.getId();
 
@@ -61,11 +63,12 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 break;
             case R.id.butDot:
                 if (last.equals(".")){
-                    input += "";
+                    input += " ";
                 }
                 else {
-                    input += ".";
-                }break;
+                    input += "0.";
+                }
+        break;
             case R.id.butSum:
                 if (last.equals("+")){
                     input+="";
