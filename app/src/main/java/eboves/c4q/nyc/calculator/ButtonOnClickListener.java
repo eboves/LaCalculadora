@@ -60,10 +60,12 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 input += "9";
                 break;
             case R.id.butDot:
-                input += ".";
-                break;
-
-
+                if (last.equals(".")){
+                    input += "";
+                }
+                else {
+                    input += ".";
+                }break;
             case R.id.butSum:
                 if (last.equals("+")){
                     input+="";
