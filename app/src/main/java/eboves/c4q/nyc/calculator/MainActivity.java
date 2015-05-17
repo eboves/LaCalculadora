@@ -2,6 +2,7 @@ package eboves.c4q.nyc.calculator;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,7 +66,10 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         input = (TextView) findViewById(R.id.textResult1);
+        input.setMovementMethod(new ScrollingMovementMethod());
 
         but0 = (Button) findViewById(R.id.but0);
         but1 = (Button) findViewById(R.id.but1);
