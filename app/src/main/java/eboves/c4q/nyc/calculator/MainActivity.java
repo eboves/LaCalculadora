@@ -192,6 +192,9 @@ public class MainActivity extends ActionBarActivity {
         else if (last2.equals(".")) {
             input.setText(inputString);
         }
+        else if (inputString.equals(" ")){
+            input.setText(inputString);
+        }
         else {
             resultBigDecimal = new Expression(inputString).eval();
             String resultString = resultBigDecimal.toPlainString();
