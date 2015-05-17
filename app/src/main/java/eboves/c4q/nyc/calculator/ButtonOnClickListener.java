@@ -62,9 +62,9 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 input += "9";
                 break;
 
-            case R.id.butDot://crashes without zero loo at iphone cal
+            case R.id.butDot://crashes without zero look at iphone cal
                 if (last.equals(".")){ //prevents dot from being clicked twice in a row
-                    input += " ";
+                    input += "";
                 }
                 if (last.equals("+")){
                     input+="0.";
