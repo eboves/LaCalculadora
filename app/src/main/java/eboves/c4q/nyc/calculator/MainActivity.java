@@ -176,11 +176,29 @@ public class MainActivity extends ActionBarActivity {
     public void solve (View v) {
         String inputString = input.getText().toString();
         BigDecimal resultBigDecimal = null;
-        resultBigDecimal = new Expression(inputString).eval();
-        String resultString = resultBigDecimal.toPlainString();
-        input.setText(resultString);
+        String last2 = inputString.substring(inputString.length() - 1);
+        if (last2.equals("+")){
+            input.setText(inputString);
+        }
+        else if (last2.equals("-")){
+            input.setText(inputString);
+        }
+        else if (last2.equals("/")){
+            input.setText(inputString);
+        }
+        else if (last2.equals("*")) {
+            input.setText(inputString);
+        }
+        else if (last2.equals(".")) {
+            input.setText(inputString);
+        }
+        else {
+            resultBigDecimal = new Expression(inputString).eval();
+            String resultString = resultBigDecimal.toPlainString();
+            input.setText(resultString);
             }
         }
+    }
 
 
 
