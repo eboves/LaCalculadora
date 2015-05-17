@@ -176,7 +176,8 @@ public class MainActivity extends ActionBarActivity {
     public void solve (View v) {
         String inputString = input.getText().toString();
         BigDecimal resultBigDecimal = null;
-        String last2 = inputString.substring(inputString.length() - 1);
+        String last2 = inputString.substring(inputString.length() - 1); //gets last character of inputString
+        // prevents app from crashing if last2 character is ...
         if (last2.equals("+")){
             input.setText(inputString);
         }
@@ -196,8 +197,8 @@ public class MainActivity extends ActionBarActivity {
             input.setText(inputString);
         }
         else {
-            resultBigDecimal = new Expression(inputString).eval();
-            String resultString = resultBigDecimal.toPlainString();
+            resultBigDecimal = new Expression(inputString).eval();// call eval to parse add solve
+            String resultString = resultBigDecimal.toPlainString();// converts big decimal result to plainstring
             input.setText(resultString);
             }
         }

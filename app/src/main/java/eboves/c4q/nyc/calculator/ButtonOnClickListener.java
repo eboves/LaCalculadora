@@ -62,7 +62,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 input += "9";
                 break;
             case R.id.butDot:
-                if (last.equals(".")){
+                if (last.equals(".")){ //prevents dot from being clicked twice in a row
                     input += " ";
                 }
                 else {
@@ -81,7 +81,8 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 }
                 else if (last.equals("*")) {
                     input += "";
-                } else {
+                }
+                else {
                     input += "+";
                 }break;
 
@@ -131,7 +132,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
                     input += "/";
                 }break;
             case R.id.butDelete:
-               if (input.length() > 1 ) {
+               if (input.length() > 1 ) { // 1 not zerp or crush
                     input = input.substring(0, input.length() - 1);
                 }
                else {
@@ -139,7 +140,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
                }
                 break;
             case R.id.butClr:
-               // if (input.length() != 0) { noe needed
+               // if (input.length() != 0) { not needed
                     input = " "; //needs space or crash if clicked twice
                 //} not needed
                 break;
