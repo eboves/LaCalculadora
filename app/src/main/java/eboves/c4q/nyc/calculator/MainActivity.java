@@ -52,7 +52,7 @@ public class MainActivity extends ActionBarActivity {
     private Button butE;
     private Button butRadian;
     private Button butDegree;
-    private Button butInvertido;
+    //private Button butInvertido;
     private Button butRadical;
 
     private String string;
@@ -69,6 +69,8 @@ public class MainActivity extends ActionBarActivity {
 
         input = (TextView) findViewById(R.id.textResult1);
         input.setMovementMethod(new ScrollingMovementMethod());
+        butSin = (Button) findViewById(R.id.butSin);
+
 
         but0 = (Button) findViewById(R.id.but0);
         but1 = (Button) findViewById(R.id.but1);
@@ -103,7 +105,7 @@ public class MainActivity extends ActionBarActivity {
         butRadian = (Button) findViewById(R.id.butRadian);
         butDegree = (Button) findViewById(R.id.butDegree);
         butClr = (Button) findViewById(R.id.butClr);
-        butInvertido = (Button) findViewById(R.id.butInvertido);
+        //butInvertido = (Button) findViewById(R.id.butInvertido);
         butRadical = (Button) findViewById(R.id.butRadical);
 
         result = (TextView) findViewById(R.id.textResult1);
@@ -134,7 +136,7 @@ public class MainActivity extends ActionBarActivity {
         buttons.add(butTan);
         buttons.add(butLog);
         buttons.add(butLn);
-        buttons.add(butInvertido);
+        //buttons.add(butInvertido);
         buttons.add(butXPower);
         buttons.add(butE);
         buttons.add(butPI);
@@ -176,6 +178,12 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void inv (View v){
+        butSin.setText("sin-1");
+        //butSin.setText("sin");
+
+    }
+
     public void solve(View v) {
         String inputString = input.getText().toString();
         BigDecimal resultBigDecimal = null;
@@ -196,8 +204,16 @@ public class MainActivity extends ActionBarActivity {
         } else if (last2.equals("(")) {
             input.setText(inputString);
         } else {
-            resultBigDecimal = new Expression(inputString).eval();// call eval to parse add solve
+
+            try {
+                resultBigDecimal = new Expression(inputString).eval();// call eval to parse add solve
+            } catch (Exception e) {
+                input.setText("ponlo bn manin");
+                return;
+            }
             String resultString = resultBigDecimal.toPlainString();// converts big decimal result to plainstring
+            input.setText(resultString);
+
             if (inputString.length() < 5) {
                 input.setText(resultString + " (That was Easy)");
             }

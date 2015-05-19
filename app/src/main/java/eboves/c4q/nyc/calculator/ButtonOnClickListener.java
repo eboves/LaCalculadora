@@ -17,7 +17,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
 
     public ButtonOnClickListener(TextView textView) {
         this.textView = textView;
-        input = "";
+        input = ""; ;
     }
 
     public void onClick(View view){

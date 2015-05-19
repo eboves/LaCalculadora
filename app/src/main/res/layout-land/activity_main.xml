@@ -19,6 +19,7 @@
         android:textSize="30dp"
         android:inputType="numberDecimal"
         android:background="#D5D5D5"
+        android:freezesText="true"
         />
 
     <LinearLayout
@@ -40,7 +41,8 @@
                 android:id="@+id/butSin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sin"/>
+                android:text="Sin"
+                />
 
 
             <Button
@@ -157,7 +159,8 @@
                 android:id="@+id/butInvertido"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="inv"/>
+                android:text="inv"
+                android:onClick="inv"/>
 
 
             <Button
@@ -190,10 +193,10 @@
 
 
             <Button
-                android:id="@+id/butNone"
+                android:id="@+id/butDot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="."/>
 
 
             <Button
