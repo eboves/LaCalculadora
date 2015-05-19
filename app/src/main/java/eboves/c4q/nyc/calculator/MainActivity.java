@@ -67,7 +67,6 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
-
         input = (TextView) findViewById(R.id.textResult1);
         input.setMovementMethod(new ScrollingMovementMethod());
 
@@ -177,36 +176,43 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void solve (View v) {
+    public void solve(View v) {
         String inputString = input.getText().toString();
         BigDecimal resultBigDecimal = null;
         String last2 = inputString.substring(inputString.length() - 1); //gets last character of inputString
         // prevents app from crashing if last2 character is ...
-        if (last2.equals("+")){
+        if (last2.equals("+")) {
             input.setText(inputString);
-        }
-        else if (last2.equals("-")){
+        } else if (last2.equals("-")) {
             input.setText(inputString);
-        }
-        else if (last2.equals("/")){
+        } else if (last2.equals("/")) {
             input.setText(inputString);
-        }
-        else if (last2.equals("*")) {
+        } else if (last2.equals("*")) {
             input.setText(inputString);
-        }
-        else if (last2.equals(".")) {
+        } else if (last2.equals(".")) {
             input.setText(inputString);
-        }
-        else if (inputString.equals(" ")){
+        } else if (inputString.equals(" ")) {
             input.setText(inputString);
-        }
-        else {
+        } else if (last2.equals("(")) {
+            input.setText(inputString);
+        } else {
             resultBigDecimal = new Expression(inputString).eval();// call eval to parse add solve
             String resultString = resultBigDecimal.toPlainString();// converts big decimal result to plainstring
-            input.setText(resultString);
+            if (inputString.length() < 5) {
+                input.setText(resultString + " (That was Easy)");
+            }
+            else if (inputString.length() > 10){
+                input.setText(resultString + " (Hard One)");
+            }
+            //else if (inputString.length() > 5 && inputString.length() < 10){
+              //  input.setText(resultString + " (Give me something harder)");
+            //}
+            else {
+                input.setText(resultString);
             }
         }
     }
+}
 
 
 
