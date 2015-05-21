@@ -3,6 +3,7 @@ package eboves.c4q.nyc.calculator;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends ActionBarActivity {
 
-
+    String ANS;
     private TextView input;
    // private Button butXPower;
     private Button butSum;
@@ -48,6 +49,7 @@ public class MainActivity extends ActionBarActivity {
     private Button butRightParent;
     private Button butXPower;
     private Button butPI;
+    private Button butAns;
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -185,7 +187,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void solve(View v) {
-        String inputString = input.getText().toString();
+        String inputString = input.getText().toString() ;
         BigDecimal resultBigDecimal = null;
         String last2 = inputString.substring(inputString.length() - 1); //gets last character of inputString
         // prevents app from crashing if last2 character is ...
@@ -203,12 +205,13 @@ public class MainActivity extends ActionBarActivity {
             input.setText(inputString);
         } else if (last2.equals("(")) {
             input.setText(inputString);
-        } else {
+        }
+        else {
 
             try {
                 resultBigDecimal = new Expression(inputString).eval();// call eval to parse add solve
             } catch (Exception e) {
-                input.setText("Algo ta mal");
+                input.setText("Nice try. I won't crash that easily.");
                 return;
             }
             String resultString = resultBigDecimal.toPlainString();// converts big decimal result to plainstring
@@ -247,7 +250,7 @@ public class MainActivity extends ActionBarActivity {
             try {
                 resultBigDecimal = new Expression(inputString).eval();// call eval to parse add solve
             } catch (Exception e) {
-                input.setText("ponlo bn manin");
+                input.setText("Nice try. I won't crash that easily.");
                 return;
             }
             String resultString = resultBigDecimal.toPlainString();// converts big decimal result to plainstring
@@ -262,7 +265,6 @@ public class MainActivity extends ActionBarActivity {
             input.setText(result + "");
         }
     }
-
     public void percentage(View v) {
         String inputString = input.getText().toString();
         BigDecimal resultBigDecimal = null;
@@ -286,13 +288,28 @@ public class MainActivity extends ActionBarActivity {
             try {
                 resultBigDecimal = new Expression(inputString).eval();// call eval to parse add solve
             } catch (Exception e) {
-                input.setText("ponlo bn manin");
+                input.setText("Nice try. I won't crash that easily.");
                 return;
             }
             double d = resultBigDecimal.doubleValue();
             double e = d * 0.01;
             input.setText(e + "");
 
+        }
+    }
+    public void ans (View v) {
+        butAns = (Button) findViewById(R.id.butAns);
+        //change button text to change action of button depending on text
+        if (butAns.getText().equals("ans")) {
+            ANS = input.getText().toString();
+            Log.d("ans", ANS);
+            butAns.setText("ANS");
+        }
+        else {
+            String inputString = input.getText().toString() + ANS;
+            Log.d("inputString", inputString);
+            input.setText(inputString);
+            butAns.setText("ans");
         }
     }
 }

@@ -225,6 +225,10 @@ public class ButtonOnClickListener implements View.OnClickListener {
             case R.id.butDegree:
                 input += "TANRAD";
                 break;
+            case R.id.butAns:
+                input += "Ans";
+
+                break;
         }
         textView.setText(input);
     }

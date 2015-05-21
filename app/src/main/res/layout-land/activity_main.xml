@@ -225,6 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="="
+                android:textSize="25dp"
                 android:onClick="solve"
                 android:layout_weight="1"
                 android:background="#FFFFFF"/>
@@ -235,6 +236,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="."
+                android:textSize="25dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"/>
 
@@ -270,9 +272,11 @@
                 android:id="@+id/butAns"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ans"
+                android:text="ans"
                 android:layout_weight="1"
-                android:background="#FF0000"/>
+                android:background="#FF0000"
+                android:onClick="ans"
+                android:textAllCaps="false"/>
 
 
             <Button
@@ -403,6 +407,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="*"
+                android:textSize="25dp"
                 android:layout_weight="1"
                 android:background="#FF0000"/>
 
@@ -412,6 +417,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="/"
+                android:textSize="25dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"/>
 
@@ -421,6 +427,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+"
+                android:textSize="25dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"/>
 
@@ -430,6 +437,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-"
+                android:textSize="35dp"
                 android:layout_weight="1"
                 android:background="#0066CC"/>
 
