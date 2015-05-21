@@ -15,12 +15,13 @@ import java.util.ArrayList;
 
 public class MainActivity extends ActionBarActivity {
 
-    public TextView input;
+
+    private TextView input;
+   // private Button butXPower;
     private Button butSum;
     private Button butSub;
     private Button butMult;
     private Button butDiv;
-    private Button butEquals;
     private Button butClr;
     private Button butDot;
     private Button but0;
@@ -37,40 +38,38 @@ public class MainActivity extends ActionBarActivity {
 
     //Scientific Calculator part
 
-    private Button butPercent;
     private Button butSin;
     private Button butCos;
     private Button butTan;
     private Button butLog;
     private Button butLn;
-    private Button butFactorial;
     private Button butExponent;
     private Button butLeftParent;
     private Button butRightParent;
     private Button butXPower;
     private Button butPI;
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (savedInstanceState != null) {
+            input.setText(savedInstanceState.getString("text1", ""));
+        }
+    }
+
     private Button butE;
     private Button butRadian;
     private Button butDegree;
     //private Button butInvertido;
     private Button butRadical;
-
-    private String string;
     private TextView result;
-    private float saveText;
-    private String operators;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         input = (TextView) findViewById(R.id.textResult1);
         input.setMovementMethod(new ScrollingMovementMethod());
-        butSin = (Button) findViewById(R.id.butSin);
-
 
         but0 = (Button) findViewById(R.id.but0);
         but1 = (Button) findViewById(R.id.but1);
@@ -93,10 +92,8 @@ public class MainActivity extends ActionBarActivity {
         butTan = (Button) findViewById(R.id.butTan);
         butLog = (Button) findViewById(R.id.butLog);
         butLn = (Button) findViewById(R.id.butLn);
-        butPercent = (Button) findViewById(R.id.butPercent);
         butLeftParent = (Button) findViewById(R.id.butLeftParent);
         butRightParent = (Button) findViewById(R.id.butRightParent);
-        butFactorial = (Button) findViewById(R.id.butFactorial);
         butXPower = (Button) findViewById(R.id.butXPower);
         butExponent = (Button) findViewById(R.id.butExponent);
         butE = (Button) findViewById(R.id.butE);
@@ -105,8 +102,9 @@ public class MainActivity extends ActionBarActivity {
         butRadian = (Button) findViewById(R.id.butRadian);
         butDegree = (Button) findViewById(R.id.butDegree);
         butClr = (Button) findViewById(R.id.butClr);
-        //butInvertido = (Button) findViewById(R.id.butInvertido);
         butRadical = (Button) findViewById(R.id.butRadical);
+        butSin = (Button) findViewById(R.id.butSin);
+        //butInvertido = (Button) findViewById(R.id.butInvertido);
 
         result = (TextView) findViewById(R.id.textResult1);
 
@@ -136,7 +134,6 @@ public class MainActivity extends ActionBarActivity {
         buttons.add(butTan);
         buttons.add(butLog);
         buttons.add(butLn);
-        //buttons.add(butInvertido);
         buttons.add(butXPower);
         buttons.add(butE);
         buttons.add(butPI);
@@ -144,16 +141,21 @@ public class MainActivity extends ActionBarActivity {
         buttons.add(butDegree);
         buttons.add(butExponent);
         buttons.add(butRadical);
-        buttons.add(butFactorial);
-        buttons.add(butPercent);
         buttons.add(butLeftParent);
         buttons.add(butRightParent);
+        //buttons.add(butInvertido);
 
         for (Button button : buttons) {
             if (button != null) { //prevents app from crashing when put to landscape
                 button.setOnClickListener(listener);
             }
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("text1", input.getText().toString());
     }
 
     @Override
@@ -169,16 +171,14 @@ public class MainActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
-    public void inv (View v){
+    public void inv(View v) {
         butSin.setText("sin-1");
         //butSin.setText("sin");
 
@@ -208,7 +208,7 @@ public class MainActivity extends ActionBarActivity {
             try {
                 resultBigDecimal = new Expression(inputString).eval();// call eval to parse add solve
             } catch (Exception e) {
-                input.setText("ponlo bn manin");
+                input.setText("Algo ta mal");
                 return;
             }
             String resultString = resultBigDecimal.toPlainString();// converts big decimal result to plainstring
@@ -216,19 +216,84 @@ public class MainActivity extends ActionBarActivity {
 
             if (inputString.length() < 5) {
                 input.setText(resultString + " (That was Easy)");
-            }
-            else if (inputString.length() > 10){
+            } else if (inputString.length() > 10) {
                 input.setText(resultString + " (Hard One)");
             }
-            //else if (inputString.length() > 5 && inputString.length() < 10){
-              //  input.setText(resultString + " (Give me something harder)");
-            //}
             else {
                 input.setText(resultString);
             }
         }
     }
+    public void factorial(View v) {
+        String inputString = input.getText().toString();
+        BigDecimal resultBigDecimal = null;
+        String last2 = inputString.substring(inputString.length() - 1); //gets last character of inputString
+        // prevents app from crashing if last2 character is ...
+        if (last2.equals("+")) {
+            input.setText(inputString);
+        } else if (last2.equals("-")) {
+            input.setText(inputString);
+        } else if (last2.equals("/")) {
+            input.setText(inputString);
+        } else if (last2.equals("*")) {
+            input.setText(inputString);
+        } else if (last2.equals(".")) {
+            input.setText(inputString);
+        } else if (inputString.equals(" ")) {
+            input.setText(inputString);
+        } else if (last2.equals("(")) {
+            input.setText(inputString);
+        } else {
+            try {
+                resultBigDecimal = new Expression(inputString).eval();// call eval to parse add solve
+            } catch (Exception e) {
+                input.setText("ponlo bn manin");
+                return;
+            }
+            String resultString = resultBigDecimal.toPlainString();// converts big decimal result to plainstring
+            input.setText(resultString);
+            resultString = input.getText().toString();
+            int result2 = Integer.parseInt(resultString);
+            double result = 1;
+
+            for (int i = result2; i > 1; i--) {
+                result = result * i;
+            }
+            input.setText(result + "");
+        }
+    }
+
+    public void percentage(View v) {
+        String inputString = input.getText().toString();
+        BigDecimal resultBigDecimal = null;
+        String last2 = inputString.substring(inputString.length() - 1); //gets last character of inputString
+        // prevents app from crashing if last2 character is ...
+        if (last2.equals("+")) {
+            input.setText(inputString);
+        } else if (last2.equals("-")) {
+            input.setText(inputString);
+        } else if (last2.equals("/")) {
+            input.setText(inputString);
+        } else if (last2.equals("*")) {
+            input.setText(inputString);
+        } else if (last2.equals(".")) {
+            input.setText(inputString);
+        } else if (inputString.equals(" ")) {
+            input.setText(inputString);
+        } else if (last2.equals("(")) {
+            input.setText(inputString);
+        } else {
+            try {
+                resultBigDecimal = new Expression(inputString).eval();// call eval to parse add solve
+            } catch (Exception e) {
+                input.setText("ponlo bn manin");
+                return;
+            }
+            double d = resultBigDecimal.doubleValue();
+            double e = d * 0.01;
+            input.setText(e + "");
+
+        }
+    }
 }
-
-
 

@@ -13,16 +13,17 @@ import android.widget.TextView;
 public class ButtonOnClickListener implements View.OnClickListener {
 
     TextView textView;
-    String input;
 
     public ButtonOnClickListener(TextView textView) {
         this.textView = textView;
-        input = ""; ;
     }
 
     public void onClick(View view){
-        String string = textView.getText().toString();
-        String last = string.substring(string.length() - 1);
+        String input = textView.getText().toString();
+        String last = "";
+
+        if (input.length() > 0){
+        last = input.substring(input.length() - 1);}
         Log.d("last",last);
 
         int click = view.getId();
@@ -76,7 +77,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 else if (last.equals("*")) {
                     input += "0.";
                 }
-                else if (string.equals(" ")) {
+                else if (input.equals(" ")) {
                     input += "0.";
                 }
                 else {
@@ -96,7 +97,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 else if (last.equals("*")) {
                     input += "";
                 }
-                else if (string.equals(" ")) {
+                else if (input.equals(" ")) {
                     input += "";
                 }
                 else {
@@ -133,7 +134,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 else if (last.equals("*")) {
                     input += "";
                 }
-                else if (string.equals(" ")) {
+                else if (input.equals(" ")) {
                         input += "";
                 }
                 else {
@@ -153,7 +154,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 else if (last.equals("*")) {
                     input += "";
                 }
-                else if (string.equals(" ")) {
+                else if (input.equals(" ")) {
                         input += "";
                 }
                 else {
@@ -161,17 +162,15 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 }break;
 
             case R.id.butDelete:
-               if (input.length() > 1 ) { // 1 not zerp or crush
+               if (input.length() > 1 ) { // 1 not zero or crush
                     input = input.substring(0, input.length() - 1);
                 }
                else {
-                   input = " ";
+                   input = "";
                }
                 break;
             case R.id.butClr:
-               // if (input.length() != 0) { not needed
-                    input = " "; //needs space or crash if clicked twice
-                //} not needed
+                    input = "";
                 break;
             case R.id.butSin:
                 input += "Sin(";
@@ -185,12 +184,12 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 input += "Tan(";
                 //TODO
                 break;
-            case R.id.butLog:
-                input += "Log(";
+            case R.id.butLn:
+                input += "LN(";
                 //TODO
                 break;
-            case R.id.butLn:
-                input += "Ln(";
+            case R.id.butLog:
+                input += "Log(";
                 //TODO
                 break;
             case R.id.butLeftParent:
@@ -200,7 +199,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 input += ")";
                 break;
             case R.id.butExponent:
-                input += "e^(";
+                input += "^";
                 //TODO
                 break;
             case R.id.butPI:
@@ -211,9 +210,22 @@ public class ButtonOnClickListener implements View.OnClickListener {
                 input += "%";
                 //TODO
                 break;
-
+            case R.id.butRadical:
+                input += "SQRT(";
+                break;
+            case R.id.butE:
+                input += "e";
+                break;
+            case R.id.butXPower:
+                input += ":)";
+                break;
+            case R.id.butRadian:
+                input += "RAD";
+                break;
+            case R.id.butDegree:
+                input += "TANRAD";
+                break;
         }
-
         textView.setText(input);
     }
 }

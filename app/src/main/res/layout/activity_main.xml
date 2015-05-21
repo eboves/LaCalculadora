@@ -15,14 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:id="@+id/textResult1"
-        android:text="0"
+
         android:textSize="35dp"
         android:inputType="numberDecimal"
         android:background="#D5D5D5"
         android:maxLines = "10"
-        android:scrollbars = "vertical"
-        android:freezesText="true"
-        />
+        android:scrollbars = "vertical"/>
 
     <LinearLayout
         android:id="@+id/layout1"

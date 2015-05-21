@@ -15,11 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:id="@+id/textResult1"
-        android:text="0"
         android:textSize="30dp"
         android:inputType="numberDecimal"
         android:background="#D5D5D5"
-        android:freezesText="true"
         />
 
     <LinearLayout
@@ -54,7 +52,8 @@
                 android:layout_height="wrap_content"
                 android:text="x!"
                 android:layout_weight="1"
-                android:background="#FFFFFF"/>
+                android:background="#FFFFFF"
+                android:onClick="factorial"/>
 
 
             <Button
@@ -96,7 +95,7 @@
                 android:id="@+id/butLog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="log"
+                android:text="Log"
                 android:layout_weight="1"
                 android:background="#FFFFFF"/>
 
@@ -105,7 +104,7 @@
                 android:id="@+id/butXPower"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="X^y"
+                android:text=":)"
                 android:layout_weight="1"
                 android:background="#FFFFFF"/>
 
@@ -180,7 +179,7 @@
                 android:id="@+id/butRadical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="v"
+                android:text="SQRT"
                 android:layout_weight="1"
                 android:background="#0066CC"/>
 
@@ -255,7 +254,8 @@
                 android:layout_height="wrap_content"
                 android:text="%"
                 android:layout_weight="1"
-                android:background="#FFFFFF"/>
+                android:background="#FFFFFF"
+                android:onClick="percentage"/>
 
         </LinearLayout>
 

@@ -645,6 +645,15 @@ public class Expression {
 				return new BigDecimal(d, mc);
 			}
 		});
+
+        addFunction(new Function("SIND", 1) {
+            @Override
+            public BigDecimal eval(List<BigDecimal> parameters) {
+                double d = Math.sin(parameters.get(0)
+                        .doubleValue());
+                return new BigDecimal(d, mc);
+            }
+        });
 		addFunction(new Function("COS", 1) {
 			@Override
 			public BigDecimal eval(List<BigDecimal> parameters) {
@@ -653,6 +662,15 @@ public class Expression {
 				return new BigDecimal(d, mc);
 			}
 		});
+
+        addFunction(new Function("COSD", 1) {
+            @Override
+            public BigDecimal eval(List<BigDecimal> parameters) {
+                double d = Math.cos(parameters.get(0)
+                        .doubleValue());
+                return new BigDecimal(d, mc);
+            }
+        });
 		addFunction(new Function("TAN", 1) {
 			@Override
 			public BigDecimal eval(List<BigDecimal> parameters) {
@@ -661,6 +679,14 @@ public class Expression {
 				return new BigDecimal(d, mc);
 			}
 		});
+        addFunction(new Function("TAND", 1) {
+            @Override
+            public BigDecimal eval(List<BigDecimal> parameters) {
+                double d = Math.tan(parameters.get(0)
+                        .doubleValue());
+                return new BigDecimal(d, mc);
+            }
+        });
 		addFunction(new Function("ASIN", 1) { // added by av
 			@Override
 			public BigDecimal eval(List<BigDecimal> parameters) {
@@ -742,14 +768,14 @@ public class Expression {
 				return parameters.get(0).abs(mc);
 			}
 		});
-		addFunction(new Function("LOG", 1) {
+		addFunction(new Function("LN", 1) {
 			@Override
 			public BigDecimal eval(List<BigDecimal> parameters) {
 				double d = Math.log(parameters.get(0).doubleValue());
 				return new BigDecimal(d, mc);
 			}
 		});
-		addFunction(new Function("LOG10", 1) {
+		addFunction(new Function("LOG", 1) {
 			@Override
 			public BigDecimal eval(List<BigDecimal> parameters) {
 				double d = Math.log10(parameters.get(0).doubleValue());
@@ -811,10 +837,11 @@ public class Expression {
 			}
 		});
 
-		variables.put("PI", PI);
+		variables.put("π", PI);
 		variables.put("TRUE", BigDecimal.ONE);
 		variables.put("FALSE", BigDecimal.ZERO);
         variables.put("e",E);
+
 
 	}
 
