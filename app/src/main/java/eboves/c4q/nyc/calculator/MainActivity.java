@@ -60,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private Button butE;
-    private Button butRadian;
+    //private Button butRadian;
     private Button butDegree;
     //private Button butInvertido;
     private Button butRadical;
@@ -101,7 +101,7 @@ public class MainActivity extends ActionBarActivity {
         butE = (Button) findViewById(R.id.butE);
         butClr = (Button) findViewById(R.id.butClr);
         butPI = (Button) findViewById(R.id.butPI);
-        butRadian = (Button) findViewById(R.id.butRadian);
+        //butRadian = (Button) findViewById(R.id.butRadian);
         butDegree = (Button) findViewById(R.id.butDegree);
         butClr = (Button) findViewById(R.id.butClr);
         butRadical = (Button) findViewById(R.id.butRadical);
@@ -139,7 +139,7 @@ public class MainActivity extends ActionBarActivity {
         buttons.add(butXPower);
         buttons.add(butE);
         buttons.add(butPI);
-        buttons.add(butRadian);
+        //buttons.add(butRadian);
         buttons.add(butDegree);
         buttons.add(butExponent);
         buttons.add(butRadical);
@@ -312,5 +312,53 @@ public class MainActivity extends ActionBarActivity {
             butAns.setText("ans");
         }
     }
-}
+    public void rad (View v) {
+//        String inputString = input.getText().toString() ;
+//        BigDecimal resultBigDecimal = null;
+//        String last2 = inputString.substring(inputString.length() - 1); //gets last character of inputString
+//        // prevents app from crashing if last2 character is ...
+//        if (last2.equals("+")) {
+//            input.setText(inputString);
+//        } else if (last2.equals("-")) {
+//            input.setText(inputString);
+//        } else if (last2.equals("/")) {
+//            input.setText(inputString);
+//        } else if (last2.equals("*")) {
+//            input.setText(inputString);
+//        } else if (last2.equals(".")) {
+//            input.setText(inputString);
+//        } else if (inputString.equals(" ")) {
+//            input.setText(inputString);
+//        } else if (last2.equals("(")) {
+//            input.setText(inputString);
+//        }
+//        else {
+//
+//            try {
+//                resultBigDecimal = new Expression(inputString).eval();// call eval to parse add solve
+//            } catch (Exception e) {
+//                input.setText("Nice try. I won't crash that easily.");
+//                return;
+//            }
+//            String resultString = resultBigDecimal.toPlainString();// converts big decimal result to plainstring
+//            input.setText(resultString);
+//
+//            if (inputString.length() < 5) {
+//                input.setText(resultString + " (That was Easy)");
+//            } else if (inputString.length() > 10) {
+//                input.setText(resultString + " (Hard One)");
+//            }
+//            else {
+//                input.setText(resultString);
+//                return;
+//            }
+//            double e = resultBigDecimal.doubleValue();
+//            double result = (Math.toDegrees(e)*(Math.PI/180));
+//            Log.d("result","" result);
+            input.setText("coming soon");
+        }
+    }
+//}
+
+
 

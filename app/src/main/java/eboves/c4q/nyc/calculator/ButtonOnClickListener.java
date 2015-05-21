@@ -219,9 +219,7 @@ public class ButtonOnClickListener implements View.OnClickListener {
             case R.id.butXPower:
                 input += ":)";
                 break;
-            case R.id.butRadian:
-                input += "RAD";
-                break;
+
             case R.id.butDegree:
                 input += "TANRAD";
                 break;
